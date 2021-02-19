@@ -1,0 +1,97 @@
+@import "../../App.scss";
+
+header{
+    margin:3rem 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.header-center{
+    display: grid;
+    position: relative;
+    overflow-x: hidden;
+}
+
+
+header::before{
+    position: absolute;
+    content: "";
+    width: 500px;
+    height: 200px;
+    background: $softBlue;
+    right: -14rem;
+    z-index: -1;
+    top: 10%;
+    border-radius: 80px;
+}
+
+
+.hero{
+    width: 100%;
+    z-index: 1;
+}
+
+
+.hero-content{
+    margin-top: 4rem;
+text-align: center;
+    h1{
+        font-size: 30px;
+        margin-bottom: 1rem;
+        text-transform: capitalize;
+    }
+
+    p{
+        margin-bottom: 1.5rem
+    }
+
+.btns{
+    display: flex;
+    justify-content: center
+}
+
+.hero-btn{
+    @extend .btn;
+    margin-right: 1rem;
+transition: 0.4s all linear;
+    &:hover{
+        background: transparent;
+        border: 2px solid $darkBlue;
+        color: $darkBlue;
+    }
+}
+
+.hero-btn-2{
+    background: #ffffff;
+    color: $darkBlue;
+}
+
+}
+
+
+@media screen and (min-width:768px){
+    .header-center{
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+header::before{
+    height: 350px;
+    right: -10rem;
+
+}
+
+    .img-container{
+        order: 1;
+    }
+
+.hero-content{
+    text-align: left;
+h1{
+    font-size: 42px;
+}
+.btns{
+    justify-content: flex-start;
+}
+}
+}

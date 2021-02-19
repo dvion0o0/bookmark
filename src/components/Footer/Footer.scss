@@ -1,0 +1,67 @@
+@import "../../App.scss";
+
+footer{
+    background: $darkBlue;
+    text-align: center;
+    padding: 3rem 0;
+
+.footer-header{
+    margin-bottom: 2rem;
+}
+
+.footer-links{
+    margin-top: 1rem;
+
+    li{
+        margin-bottom: 1rem;
+
+        a{
+            text-transform: uppercase;
+        }
+    }
+}
+.footer-btn{
+    margin-left: 1rem;
+    color: #ffffff;
+    font-size: 2rem;
+    transition: 0.4s all linear;
+    cursor: pointer;
+
+    &:hover{
+        color: $softBlue;
+    }
+}
+}
+
+
+@media screen and (min-width:768px){
+footer{
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+
+.footer-center{
+   display: grid;
+   grid-template-columns: 3fr auto;
+
+.footer-header{
+    display: flex;
+    align-items: flex-end;
+}
+            .footer-links{
+                    display: flex;
+                    justify-content: space-between;
+                    transform: translateY(40%);
+
+                    li{
+                        margin-left: 1rem;
+                    }
+
+}
+.footer-icons{
+    align-self: center;
+}
+
+}
+}
+}

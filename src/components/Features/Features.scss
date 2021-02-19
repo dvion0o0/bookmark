@@ -1,0 +1,125 @@
+@import "../../App.scss";
+
+.features{
+    margin-top: 6rem;
+    overflow-x: hidden;
+    margin-bottom: 6rem;
+    
+&-header{
+    text-align: center;
+
+    h1{
+        margin-bottom: 1rem;
+    }
+}
+}
+
+.tabs{
+    margin-top:2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+&-btn{
+    padding: 2rem 3rem;
+    font-size: 20px;
+    color: $darkBlue;
+    outline: transparent;
+    background: transparent;
+    border-bottom: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: 0.4s all linear;
+    font-weight: 500;
+
+    &:hover{
+        color:$softRed
+    }
+}
+}
+
+.features-content{
+margin-top: 4rem;
+display: grid;
+gap: 2rem;
+position: relative;
+&::before{
+content: "";
+position: absolute;
+width: 400px;
+height: 230px;
+background: $softBlue;
+left: -13rem;
+z-index: -2;
+top: 8%;
+border-radius: 80px;
+}
+
+.feature-img{
+width: 100%;
+}
+.info{
+    margin-top: 3rem;
+    text-align: center;
+    h2{
+        margin-bottom: 1rem;
+    }
+
+    &-btn{
+        background: $softBlue;
+        border: none;
+        padding: 1rem 2rem;
+        margin-top: 1.5rem;
+        color: #ffffff;
+        font-weight: 500;
+        transition: 0.4s all linear;
+        cursor: pointer;
+
+        &:hover{
+            background: $softRed;
+        }
+    }
+}
+}
+
+
+@media screen and (min-width:768px){
+
+.features-header{
+    p{
+        width: 32rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+    .tabs{
+        flex-direction: row;
+    }
+
+.features-content{
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+
+    .info{
+        order: 1;
+    text-align: left;
+    }
+
+    &::before{
+        height: 300px;
+        left: -14rem;
+        top:1rem;
+    }
+}
+
+}
+
+.active{
+    border-bottom: 4px solid $softRed;
+    color: $softRed;
+}

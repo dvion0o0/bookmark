@@ -1,0 +1,57 @@
+@import "../../App.scss";
+
+nav{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle{
+    cursor: pointer;
+}
+
+@media screen and (min-width:768px){
+    .toggle{
+        display: none;
+    }
+}
+
+.nav-links{
+    display: none;
+    align-items: center;
+
+
+    li{
+        margin-right: 1rem;
+    }
+
+    .nav-link{
+        text-transform: uppercase;
+        font-weight: 400;
+    }
+
+}
+
+@media screen and (min-width:768px){
+    .nav-links{
+        display: flex;
+    }
+}
+
+.nav-btn{
+    @extend .btn;
+    text-transform: uppercase;
+    background: $softRed;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    transition: 0.4s all linear;
+    &:hover{
+        background:$softBlue;
+    }
+}

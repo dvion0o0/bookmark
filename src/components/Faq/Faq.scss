@@ -1,0 +1,71 @@
+@import "../../App.scss";
+
+.Faq{
+    text-align: center;
+    margin-bottom: 4rem;
+&-title{
+    margin-bottom: 2.5rem;
+    h2{
+        margin-bottom: 1rem;
+    }
+}
+}
+
+.accordion{
+    display: grid;
+    grid-template-columns: 3fr auto;
+    text-align: left;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+
+    .underline{
+        margin-top: 1rem;
+    }
+
+    .arrow{
+        cursor: pointer;
+        transition: 0.4s all linear;
+    }
+}
+
+
+.faq-btn{
+    background: $softBlue;
+    padding: 1rem 2rem;
+    border:none;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+transition: 0.4s all linear;
+cursor: pointer;
+margin-top: 2rem;
+    &:hover{
+        background: $softRed;
+    }
+}
+
+
+
+.read{
+    transform: rotate(180deg);
+}
+
+@media screen and (min-width:768px){
+    .Faq-title{
+        p{
+            width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+
+.accordions{
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+}
+
+}

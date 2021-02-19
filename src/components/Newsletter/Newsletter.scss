@@ -1,0 +1,81 @@
+@import "../../App.scss";
+
+.newsletter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background: $softBlue;
+    padding: 3rem 2rem;
+
+    h4{margin-bottom: 1rem;
+        color: #ffffff;
+    }
+
+    h2{
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+.form{
+    display: grid;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    &-input{
+        padding: 1.2rem 1rem;
+        border-radius: 6px;
+        outline: transparent;
+        font-size: 16px;
+        border: transparent;
+    }
+    &-btn{
+        background:$softRed;
+        padding: 1.2rem;
+        text-align: center;
+        color: #ffffff;
+        font-size: 18px;
+        border-radius: 6px;
+        border:transparent;
+        outline: transparent;
+        transition: 0.4s all linear;
+        cursor: pointer;
+        text-transform: capitalize;
+
+        &:hover{
+            background: #ffffff;
+            color: $darkBlue;
+        }
+    }
+}
+small{
+    color: $softRed;
+}
+
+}
+
+@media screen and (min-width:768px){
+.newsletter-container{
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .form{
+        grid-template-columns: 2fr 1fr;
+small{
+    text-align: left;
+}
+        
+    }
+}
+
+.error{
+    border:2px solid $softRed;
+    color: $softRed;
+    padding: 1.2rem 1rem;
+    border-radius: 6px;
+    outline: transparent;
+    font-size: 16px;
+}

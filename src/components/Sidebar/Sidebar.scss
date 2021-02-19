@@ -1,0 +1,94 @@
+@import "../../App.scss";
+
+.aside{
+   background:$darkBlue;
+   min-height: 100vh;
+   width: 100%;
+   top: 0;
+   left: -100%;
+   position: fixed;
+   opacity: 0.9;
+   transition: 0.4s all linear;
+   z-index: 100;
+}
+
+.sidebar-center{
+   padding-top: 2rem;
+   padding-bottom: 2rem;
+}
+
+.sidebar-header{
+   display:flex;
+   justify-content: space-between;
+}
+
+.close{
+   cursor: pointer;
+}
+
+.side-links{
+   margin-top: 5rem;
+  text-align: center;
+
+li{
+   margin-bottom: 1rem;
+   border-bottom: 1px solid $grayBlue;
+   padding:1rem 0;
+}.side-link{
+   text-transform: uppercase;
+   color: #ffffff;
+   cursor: pointer;
+   transition: 0.4s all linear;
+
+   &:hover{
+      color:$softRed;
+   }
+}
+}
+
+.side-btn{
+   @extend .btn;
+width: 100%;
+padding:1rem 3rem;
+margin-top: 1rem;
+background: transparent;
+border:2px solid #ffffff;
+text-transform: uppercase;
+font-size: 22px;
+font-weight: 500;
+transition: 0.4s all linear;
+&:hover{
+   color:$darkBlue;
+   background: white;
+}
+}
+
+.social-icons{
+   position: absolute;
+   bottom: 10%;
+   left: 50%;
+   transform: translate(-50%, -10%);
+
+.social-btn{
+   color:#ffffff;
+   margin-left: 1rem;
+   font-size: 32px;
+   cursor: pointer;
+   transition: 0.4s all linear;
+   &:hover{
+      color: $softBlue;
+   }
+}
+
+}
+
+@media screen and (min-width:768px){
+   .aside{
+      display:none;
+   }
+}
+
+.show{
+   left: 0;
+   transition: 0.4s all linear;
+}
